@@ -23,7 +23,7 @@ class Header extends Component {
         let cookiePeramban = cookies.get('MOVIETIME_SESSID')
         console.log(cookiePeramban)
         
-        var url = 'http://localhost:5001/cookie';
+        var url = 'https://dry-cliffs-97391.herokuapp.com/cookie';
         axios.post(url, {
             cookieMovietime: cookiePeramban,
         })
@@ -70,7 +70,7 @@ class Header extends Component {
         // console.log(this.refs.emaillogin.value)
         // console.log(this.refs.passwordlogin.value)
 
-        var url = 'http://localhost:5001/login';
+        var url = 'https://dry-cliffs-97391.herokuapp.com/login';
         axios.post(url, {
           email: this.refs.emaillogin.value,
           password: this.refs.passwordlogin.value
@@ -101,7 +101,7 @@ class Header extends Component {
         let cookiePeramban = cookies.get('MOVIETIME_SESSID')
         console.log(cookiePeramban)
 
-        var url = 'http://localhost:5001/signout';
+        var url = 'https://dry-cliffs-97391.herokuapp.com/signout';
         axios.post(url, {
           cookieMovietime: cookiePeramban,
         })

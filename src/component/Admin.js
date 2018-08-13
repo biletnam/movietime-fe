@@ -6,7 +6,7 @@ import axios from 'axios';
 class Admin extends Component {
     masuk(){
         // console.log(`Sukses jalankan fungsi masuk`)
-        var url = 'http://localhost:5001/adminlogin';
+        var url = 'https://dry-cliffs-97391.herokuapp.com/adminlogin';
         axios.post(url, {
           username: this.refs.usernameadmin.value,
           password: this.refs.passwordadmin.value,

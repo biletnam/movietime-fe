@@ -66,7 +66,7 @@ class MovieDetails extends Component {
         let cookiePeramban = cookies.get('MOVIETIME_SESSID')
         console.log(cookiePeramban)
         
-        var url = 'http://localhost:5001/cookie';
+        var url = 'https://dry-cliffs-97391.herokuapp.com/cookie';
         axios.post(url, {
             cookieMovietime: cookiePeramban,
         })
@@ -108,7 +108,7 @@ class MovieDetails extends Component {
         })
 
         //Get screening schedule
-        axios.get(`http://localhost:5001/movie/${this.state.movieSelected}`)
+        axios.get(`https://dry-cliffs-97391.herokuapp.com/movie/${this.state.movieSelected}`)
         .then((takeData) => {          
           this.setState({
             screeningSchedule: takeData.data,
@@ -146,7 +146,7 @@ class MovieDetails extends Component {
             screeningSelected: screening_id,
         })
 
-        axios.get(`http://localhost:5001/seat/${screening_id}`)
+        axios.get(`https://dry-cliffs-97391.herokuapp.com/seat/${screening_id}`)
         .then((ambilData) => {
             // For uncheck seat that have been booked (change the state)
             const hehe = ambilData.data.map((item, index)=>{
@@ -197,7 +197,7 @@ class MovieDetails extends Component {
 
     //Function to login
     login(){
-        var url = 'http://localhost:5001/login';
+        var url = 'https://dry-cliffs-97391.herokuapp.com/login';
         axios.post(url, {
           email: this.refs.emaillogin.value,
           password: this.refs.passwordlogin.value
@@ -227,7 +227,7 @@ class MovieDetails extends Component {
         // console.log(this.state.email)
         // console.log(this.state.password)
 
-        var url = 'http://localhost:5001/register';
+        var url = 'https://dry-cliffs-97391.herokuapp.com/register';
         axios.post(url, {
           email: this.refs.emailregister.value,
           password: this.refs.passwordregister.value,
@@ -257,7 +257,7 @@ class MovieDetails extends Component {
     createReservation() {
         console.log(`Ini di create reservation ${this.state.email}`)
 
-        var url = 'http://localhost:5001/createreservation';
+        var url = 'https://dry-cliffs-97391.herokuapp.com/createreservation';
         axios.post(url, {
             email: this.state.email,
             password: this.state.password,
