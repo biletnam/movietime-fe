@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 
 class Summary extends Component {
     // componentDidMount(){
-    //     axios.get(`http://localhost:5001/movie/summary`)
+    //     axios.get(`https://dry-cliffs-97391.herokuapp.com/movie/summary`)
     //     .then((ambilData) => {          
     //       this.setState({
     //         screeningSchedule: ambilData.data,
