@@ -873,10 +873,10 @@ class MovieDetails extends Component {
                 </div>
                 <div class="modal-body">
                     <p>Please login to continue</p>
-                    <input type='text' placeholder=' Email' ref="emaillogin" value="andi@yahoo.com" />
+                    <input type='text' placeholder=' Email' ref="emaillogin" />
                     <br />
                     <br />
-                    <input type='email' placeholder=' Password' ref="passwordlogin" value="andi1234" />
+                    <input type='password' placeholder=' Password' ref="passwordlogin" />
                     <br/>
                     <br/>
                     <button type="button" class="btn btn-primary" onClick={()=> {this.login();}}>LOG IN</button>
@@ -886,10 +886,10 @@ class MovieDetails extends Component {
                     <input type='text' placeholder=' Email' ref="emailregister" />
                     <br />
                     <br />
-                    <input type='email' placeholder=' Password' ref="passwordregister" />
+                    <input type='password' placeholder=' Password' ref="passwordregister" />
                     <br />
                     <br />
-                    <input type='email' placeholder=' Confirm Pasword' ref="passwordregisterconfirm" />
+                    <input type='password' placeholder=' Confirm Pasword' ref="passwordregisterconfirm" />
                     <br/>
                     <br/>
                     <button type="button" class="btn btn-primary" onClick={()=> {this.register();}}>SIGN UP</button>

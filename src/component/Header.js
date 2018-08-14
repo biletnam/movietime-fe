@@ -23,8 +23,8 @@ class Header extends Component {
         }
     }
 
+    //Check cookies
     componentWillMount(){
-        //Check cookies
         let cookiePeramban = cookies.get('MOVIETIME_SESSID')
         console.log(cookiePeramban)
         
@@ -51,6 +51,7 @@ class Header extends Component {
         });
     }
 
+    // Shrink the menu
     componentDidMount() {
         document.addEventListener('scroll', () => {
             if (window.scrollY > 50) {
